@@ -47,8 +47,7 @@ const PACKAGES = [
 
 /* ---------- backend analytics & visitor tracking ---------- */
 let currentVisitId = null;
-
-fetch("http://localhost:3000/api/visit", {
+fetch("https://rana-design-api.onrender.com/api/visit", {
   method: "POST",
   headers: { "Content-Type": "application/json" }
 })
