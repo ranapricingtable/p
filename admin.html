@@ -319,20 +319,20 @@
     async function loadAllData() {
       await Promise.all([loadOrders(), loadVisits()]);
     }
-
-    async function updateStatus(refId, newStatus) {
-      try {
-        const res = await fetch(`https://rana-design-api.onrender.com/api/orders/${refId}/status`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ status: newStatus })
-        });
-        const data = await res.json();
-        if (!data.success) alert("فشل تحديث الحالة");
-      } catch (err) {
-        alert("حدث خطأ أثناء تعديل الحالة");
-      }
-    }
+async function updateStatus(refId, newStatus) {
+  try {
+    const res = await fetch(`https://rana-design-api.onrender.com/api/orders/${refId}/status`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status: newStatus })
+    });
+    const data = await res.json();
+    if (!data.success) alert("فشل تحديث الحالة");
+  } catch (err) {
+    alert("حدث خطأ أثناء تعديل الحالة");
+  }
+}
+    
 
     async function loadOrders() {
       const tbody = document.getElementById("ordersTableBody");
