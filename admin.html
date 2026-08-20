@@ -337,7 +337,7 @@ async function updateStatus(refId, newStatus) {
     async function loadOrders() {
       const tbody = document.getElementById("ordersTableBody");
       try {
-        const res = await fetch("http://localhost:3000/api/orders");
+        const res = await fetch("https://rana-design-api.onrender.com/api/orders");
         const json = await res.json();
 
         if (!json.success || !json.data || json.data.length === 0) {
@@ -391,7 +391,19 @@ async function updateStatus(refId, newStatus) {
     async function loadVisits() {
       const tbody = document.getElementById("visitsTableBody");
       try {
-        const res = await fetch("http://localhost:3000/api/visits");
+        async function updateStatus(refId, newStatus) {
+  try {
+    const res = await fetch(`https://rana-design-api.onrender.com/api/orders/${refId}/status`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ status: newStatus })
+    });
+    const data = await res.json();
+    if (!data.success) alert("فشل تحديث الحالة");
+  } catch (err) {
+    alert("حدث خطأ أثناء تعديل الحالة");
+  }
+}
         const json = await res.json();
 
         if (!json.success || !json.data || json.data.length === 0) {
