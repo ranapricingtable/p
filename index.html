@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rana Design | تصميم وتطوير ويب</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;600;800&family=Lalezar&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= SPLASH INTRO ================= -->
+<div class="splash" id="splash">
+  <img src="logo.png" alt="Rana Design" class="splash-logo">
+  <div class="splash-text">
+    <p class="splash-en">Welcome to Invites by Rana</p>
+    <p class="splash-sub">We will be happy to serve you · رح نكون سعداء نخدمكم</p>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <img src="logo.png" alt="logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-en">Rana <em>Design</em></span>
+        <span class="brand-ar">رنى ديزاين</span>
+      </div>
+    </div>
+    <button class="cart-btn" id="cartBtn" aria-label="cart">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h2l2.4 12.4a2 2 0 002 1.6h8.2a2 2 0 002-1.6L21 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+      <span id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <img src="logo.png" alt="Rana Design" class="hero-logo">
+    <p class="hero-en">Welcome to Invites by Rana</p>
+    <p class="hero-tagline">We will be happy to serve you · رح نكون سعداء نخدمكم</p>
+  </div>
+</section>
+
+<!-- ================= 3-WAY QUICK NAV ================= -->
+<section class="quicknav">
+  <div class="wrap quicknav-grid">
+    <button class="quicknav-card qn-web" data-target="web">
+      <span class="qn-icon">🌐</span>
+      <span class="qn-en">Web Services</span>
+      <span class="qn-ar">خدمات الويب</span>
+    </button>
+    <button class="quicknav-card qn-design" data-target="designs">
+      <span class="qn-icon">🎨</span>
+      <span class="qn-en">Design Services</span>
+      <span class="qn-ar">خدمات التصميم</span>
+    </button>
+    <button class="quicknav-card qn-packages" data-target="packages">
+      <span class="qn-icon">💎</span>
+      <span class="qn-en">Packages</span>
+      <span class="qn-ar">الباقات</span>
+    </button>
+  </div>
+</section>
+
+<!-- ================= DESIGN SERVICES ================= -->
+<section class="section" id="designs">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Design Services · خدمات التصميم</p>
+      <h2 class="en">Design Services</h2>
+      <h2 class="ar">خدمات التصميم</h2>
+    </div>
+    <div class="grid grid-cards" id="designsGrid"></div>
+  </div>
+</section>
+
+<!-- ================= WEB SERVICES ================= -->
+<section class="section section-alt" id="web">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Web Services · خدمات الويب</p>
+      <h2 class="en">Web Services</h2>
+      <h2 class="ar">خدمات الويب</h2>
+    </div>
+    <div class="grid grid-cards" id="webGrid"></div>
+  </div>
+</section>
+
+<!-- ================= PACKAGES ================= -->
+<section class="section section-packages" id="packages">
+  <div class="wrap">
+    <div class="section-head packages-head">
+      <p class="eyebrow eyebrow-gold">Packages · الباقات</p>
+      <h2 class="en">Packages</h2>
+      <h2 class="ar">الباقات</h2>
+    </div>
+    <div class="grid grid-packages" id="packagesGrid"></div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM CTA ================= -->
+<section class="section insta-cta">
+  <div class="wrap insta-inner">
+    <h2 class="en">Follow us on Instagram</h2>
+    <a href="https://instagram.com/invitesbyrana" target="_blank" rel="noopener" class="btn btn-primary">@invitesbyrana 🚀</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Rana Design — جميع الحقوق محفوظة</p>
+  </div>
+</footer>
+
+<!-- ================= FLOATING CART BAR ================= -->
+<div class="cart-bar" id="cartBar">
+  <span id="cartBarText">Services: 0 | Total: $0</span>
+  <button class="btn btn-primary btn-sm" id="checkoutOpenBtn">Order Now · إتمام الطلب</button>
+</div>
+
+<!-- ================= MULTI-STEP MODAL ================= -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="close">×</button>
+
+    <div class="modal-head">
+      <h3 class="en">Complete your order</h3>
+      <h3 class="ar">إتمام الطلب</h3>
+    </div>
+
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="steps-indicator" id="stepsIndicator">
+      <span class="step-dot active" data-step="1">1</span>
+      <span class="step-dot" data-step="2">2</span>
+      <span class="step-dot" data-step="3">3</span>
+      <span class="step-dot" data-step="4">4</span>
+    </div>
+
+    <div class="step-viewport">
+      <!-- STEP 1 : NAME -->
+      <div class="step-panel active" data-panel="1">
+        <label><span class="en">Full Name</span><span class="ar">الاسم الكامل</span></label>
+        <input type="text" id="custName" placeholder="Your name · اسمك">
+        <label><span class="en">Phone Number</span><span class="ar">رقم الهاتف</span></label>
+        <input type="tel" id="custPhone" placeholder="03 123 456">
+        <div class="step-actions"><span></span><button class="btn btn-primary" data-next="2">Next · التالي</button></div>
+      </div>
+
+      <!-- STEP 2 : DETAILS -->
+      <div class="step-panel" data-panel="2">
+        <label><span class="en">What do you need?</span><span class="ar">شو بدك بالضبط؟</span></label>
+        <textarea id="custDetails" rows="4" placeholder="Tell me more about your order... · احكيلي أكتر عن طلبك..."></textarea>
+        <div class="step-actions"><button class="btn btn-outline" data-prev="1">Back · السابق</button><button class="btn btn-primary" data-next="3">Next · التالي</button></div>
+      </div>
+
+      <!-- STEP 3 : PAYMENT -->
+      <div class="step-panel" data-panel="3">
+        <label><span class="en">Payment Method</span><span class="ar">طريقة الدفع</span></label>
+        <div class="pay-options">
+          <label class="pay-opt"><input type="radio" name="pay" value="Wish Money" checked><span>Wish Money · ويش موني</span></label>
+          <label class="pay-opt"><input type="radio" name="pay" value="Cash"><span>Cash · كاش</span></label>
+        </div>
+        <div class="step-actions"><button class="btn btn-outline" data-prev="2">Back · السابق</button><button class="btn btn-primary" data-next="4">Next · التالي</button></div>
+      </div>
+
+      <!-- STEP 4 : CONFIRM -->
+      <div class="step-panel" data-panel="4">
+        <div class="confirm-box">
+          <div class="confirm-check">✓</div>
+          <p class="en">Your order is ready!</p>
+          <p class="ar">تم تجهيز طلبك بنجاح!</p>
+          <p class="confirm-sub">Tap below to send your order details via WhatsApp · اضغط تحت لإرسال التفاصيل عبر واتساب</p>
+        </div>
+        <div class="step-actions"><button class="btn btn-outline" data-prev="3">Back · السابق</button>
+          <button class="btn btn-whatsapp" id="sendWhatsapp">Send to WhatsApp · إرسال 🚀</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
