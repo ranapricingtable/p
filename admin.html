@@ -240,7 +240,6 @@
         <button class="btn-refresh" onclick="loadAllData()">🔄 تحديث البيانات</button>
       </div>
 
-      <!-- الإحصائيات -->
       <div class="stats-container">
         <div class="stat-box">
           <div class="stat-title">إجمالي عدد الزوار</div>
@@ -256,7 +255,6 @@
         </div>
       </div>
 
-      <!-- جدول الطلبات -->
       <div class="table-wrapper">
         <div class="table-header-title">🛒 سجل الطلبات الواردة وإدارة الحالات</div>
         <div class="responsive-table">
@@ -278,7 +276,6 @@
         </div>
       </div>
 
-      <!-- جدول الزوار والأجهزة -->
       <div class="table-wrapper">
         <div class="table-header-title">👁️ سجل الزوار والأجهزة المتصلة</div>
         <div class="responsive-table">
@@ -300,6 +297,7 @@
 
   <script>
     const SECRET_KEY = "ranaadmin2010";
+    const API_BASE = "https://rana-design-api.onrender.com";
 
     document.getElementById("adminPass").addEventListener("keypress", (e) => {
       if (e.key === "Enter") checkAuth();
@@ -319,25 +317,25 @@
     async function loadAllData() {
       await Promise.all([loadOrders(), loadVisits()]);
     }
-async function updateStatus(refId, newStatus) {
-  try {
-    const res = await fetch(`https://rana-design-api.onrender.com/api/orders/${refId}/status`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ status: newStatus })
-    });
-    const data = await res.json();
-    if (!data.success) alert("فشل تحديث الحالة");
-  } catch (err) {
-    alert("حدث خطأ أثناء تعديل الحالة");
-  }
-}
-    
+
+    async function updateStatus(refId, newStatus) {
+      try {
+        const res = await fetch(`${API_BASE}/api/orders/${refId}/status`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ status: newStatus })
+        });
+        const data = await res.json();
+        if (!data.success) alert("فشل تحديث الحالة");
+      } catch (err) {
+        alert("حدث خطأ أثناء تعديل الحالة");
+      }
+    }
 
     async function loadOrders() {
       const tbody = document.getElementById("ordersTableBody");
       try {
-        const res = await fetch("https://rana-design-api.onrender.com/api/orders");
+        const res = await fetch(`${API_BASE}/api/orders`);
         const json = await res.json();
 
         if (!json.success || !json.data || json.data.length === 0) {
@@ -391,19 +389,7 @@ async function updateStatus(refId, newStatus) {
     async function loadVisits() {
       const tbody = document.getElementById("visitsTableBody");
       try {
-        async function updateStatus(refId, newStatus) {
-  try {
-    const res = await fetch(`https://rana-design-api.onrender.com/api/orders/${refId}/status`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ status: newStatus })
-    });
-    const data = await res.json();
-    if (!data.success) alert("فشل تحديث الحالة");
-  } catch (err) {
-    alert("حدث خطأ أثناء تعديل الحالة");
-  }
-}
+        const res = await fetch(`${API_BASE}/api/visits`);
         const json = await res.json();
 
         if (!json.success || !json.data || json.data.length === 0) {
