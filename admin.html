@@ -322,7 +322,7 @@
 
     async function updateStatus(refId, newStatus) {
       try {
-        const res = await fetch(`http://localhost:3000/api/orders/${refId}/status`, {
+        const res = await fetch(`https://rana-design-api.onrender.com/api/orders/${refId}/status`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ status: newStatus })
