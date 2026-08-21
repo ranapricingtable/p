@@ -23,9 +23,9 @@ const DESIGNS = [
 ];
 
 const WEB = [
-  { id: "w1",  icon: "🌐", en: "Full Website (Photos → Website)", ar: "موقع كامل من صور لموقع",     price: "20/50" },
-  { id: "w2",  icon: "🔗", en: "QR Code (Site Ready)",             ar: "QR كود (الموقع جاهز)",       price: 15 },
-  { id: "w3",  icon: "🔗", en: "QR Code (All Ready)",              ar: "QR كود (كل شي جاهز)",        price: 3 },
+  { id: "w1",  icon: "🌐", en: "QR code  (Photos ready )", ar: "صور جاهزة ",     price: "15" },
+  { id: "w2",  icon: "🔗", en: "QR Code (Site Ready)",             ar: "QR كود (الموقع جاهز)",       price: 3 },
+  { id: "w3",  icon: "🔗", en: "QR Code (All Ready)",              ar: "QR كود (كل شي من عنا)",        price: "20/50" },
   { id: "w4",  icon: "💎", en: "Website Design + Content by Us",   ar: "تصميم ومحتوى الموقع منا",     price: 250 },
   { id: "w5",  icon: "🗂️", en: "Portfolio Website",                ar: "موقع بورتفوليو",              price: "50/100" },
   { id: "w6",  icon: "📝", en: "Website (Your Content Ready)",     ar: "موقع (المحتوى جاهز عندك)",    price: "50/100" },
@@ -111,7 +111,7 @@ function renderPackages() {
       <span class="pkg-name-ar">${p.ar}</span>
       <div class="price">$${p.price}</div>
       <ul>${p.items.map(i => `<li>${i}</li>`).join("")}</ul>
-      <button class="btn btn-primary pkg-add" data-id="${p.id}">Choose · اختاري</button>
+      <button class="btn btn-primary pkg-add" data-id="${p.id}">Choose · </button>
     </div>
   `).join("");
   observeReveals();
