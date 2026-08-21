@@ -5,38 +5,38 @@
    ====================================================== */
 
 const DESIGNS = [
-  {id: " d1" , icon: "📢", en: "Ads",                          ar: "إعلانات",                 price: 10 },
-  { id: "d2",  icon: "💌", en: "Invitations",                  ar: "دعوات",                   price: 10 },
-  { id: "d3",  icon: "📄", en: "CV",                            ar: "سيرة ذاتية",              price: 15 },
-  { id: "d4",  icon: "🖋️", en: "Logo",                          ar: "لوغو",                    price: 20 },
-  { id: "d5",  icon: "🖨️", en: "50 Printed Cards",              ar: "50 كارت مطبوعة",          price: 50 },
-  { id: "d6",  icon: "🏅", en: "Certificate",                   ar: "شهادة",                   price: 7 },
-  { id: "d7",  icon: "🎠", en: "Carousel",                      ar: "كاروسيل",                 price: 15 },
-  { id: "d8",  icon: "🎁", en: "50 Cards + 50 Stickers",        ar: "50 كارت + 50 ستيكر",      price: 70 },
-  { id: "d9",  icon: "📱", en: "Insta Feed Layout",             ar: "تنسيق فيد إنستغرام",       price: 20 },
-  { id: "d10", icon: "✨", en: "Social Media Branding Kit",     ar: "كيت هوية سوشيال ميديا",   price: 25 },
-  { id: "d11", icon: "📋", en: "Menu",                          ar: "منيو",                    price: 15 },
-  { id: "d12", icon: "💳", en: "Digital Business Card",         ar: "بزنس كارد رقمية",         price: 15 },
-  { id: "d13", icon: "🖼️", en: "Resize",                        ar: "تغيير مقاس",              price: 3 },
-  { id: "d14", icon: "🎥", en: "AI Ads Video",                  ar: "فيديو إعلان AI",          price: 20 },
-  { id: "d15", icon: "🗂️", en: "Portfolio Design",              ar: "تصميم بورتفوليو",         price: "20/50" },
+  { id: "d1",  icon: "", en: "Ads",                          ar: "إعلانات",                 price: 10 },
+  { id: "d2",  icon: "", en: "Invitations",                  ar: "دعوات",                   price: 10 },
+  { id: "d3",  icon: "", en: "CV",                            ar: "سيرة ذاتية",              price: 15 },
+  { id: "d4",  icon: "", en: "Logo",                          ar: "لوغو",                    price: 20 },
+  { id: "d5",  icon: "", en: "50 Printed Cards",              ar: "50 كارت مطبوعة",          price: 50 },
+  { id: "d6",  icon: "", en: "Certificate",                   ar: "شهادة",                   price: 7 },
+  { id: "d7",  icon: "", en: "Carousel",                      ar: "كاروسيل",                 price: 15 },
+  { id: "d8",  icon: "", en: "50 Cards + 50 Stickers",        ar: "50 كارت + 50 ستيكر",      price: 70 },
+  { id: "d9",  icon: "", en: "Insta Feed Layout",             ar: "تنسيق فيد إنستغرام",       price: 20 },
+  { id: "d10", icon: "", en: "Social Media Branding Kit",     ar: "كيت هوية سوشيال ميديا",   price: 25 },
+  { id: "d11", icon: "", en: "Menu",                          ar: "منيو",                    price: 15 },
+  { id: "d12", icon: "", en: "Digital Business Card",         ar: "بزنس كارد رقمية",         price: 15 },
+  { id: "d13", icon: "", en: "Resize",                        ar: "تغيير مقاس",              price: 3 },
+  { id: "d14", icon: "", en: "AI Ads Video",                  ar: "فيديو إعلان AI",          price: 20 },
+  { id: "d15", icon: "", en: "Portfolio Design",              ar: "تصميم بورتفوليو",         price: "20/50" },
 ];
 
 const WEB = [
-   { id: "w1",  icon: "🌐", en: "QR code  (Photos ready )", ar: "صور جاهزة ",     price: "15" },
-  { id: "w2",  icon: "🔗", en: "QR Code (Site Ready)",             ar: "QR كود (الموقع جاهز)",       price: 3 },
-  { id: "w3",  icon: "🔗", en: "QR Code (All Ready)",              ar: "QR كود (كل شي من عنا)",        price: "20/50" },
-  { id: "w4",  icon: "💎", en: "Website Design + Content by Us",   ar: "تصميم ومحتوى الموقع منا",     price: 250 },
-  { id: "w5",  icon: "🗂️", en: "Portfolio Website",                ar: "موقع بورتفوليو",              price: "50/100" },
-  { id: "w6",  icon: "📝", en: "Website (Your Content Ready)",     ar: "موقع (المحتوى جاهز عندك)",    price: "50/100" },
-  { id: "w7",  icon: "🪪", en: "Web Brand Identity",                ar: "هوية بصرية للويب",            price: 50 },
-  { id: "w8",  icon: "📋", en: "Menu Website",                     ar: "منيو ويب",                    price: 20 },
-  { id: "w9",  icon: "🚀", en: "Landing Page",                     ar: "لاندنغ بيج",                  price: 40 },
-  { id: "w10", icon: "📊", en: "Dashboard",                        ar: "لوحة تحكم",                   price: "30/100" },
-  { id: "w11", icon: "🔄", en: "Design → Website Conversion",      ar: "تحويل تصميم إلى ويب",         price: 30 },
-  { id: "w12", icon: "🧭", en: "Multi-step Flow",                  ar: "خطوات متعددة",                price: "30/50" },
-  { id: "w13", icon: "✏️", en: "Website Edit",                     ar: "تعديل على الموقع",            price: "10/50" },
-];s
+  { id: "w1",  icon: "", en: "QR code (Photos ready)",        ar: "صور جاهزة",                   price: "15" },
+  { id: "w2",  icon: "", en: "QR Code (Site Ready)",          ar: "QR كود (الموقع جاهز)",        price: 3 },
+  { id: "w3",  icon: "", en: "QR Code (All Ready)",           ar: "QR كود (كل شي من عنا)",       price: "20/50" },
+  { id: "w4",  icon: "", en: "Website Design + Content by Us", ar: "تصميم ومحتوى الموقع منا",    price: 250 },
+  { id: "w5",  icon: "", en: "Portfolio Website",             ar: "موقع بورتفوليو",              price: "50/100" },
+  { id: "w6",  icon: "", en: "Website (Your Content Ready)",  ar: "موقع (المحتوى جاهز عندك)",    price: "50/100" },
+  { id: "w7",  icon: "", en: "Web Brand Identity",             ar: "هوية بصرية للويب",            price: 50 },
+  { id: "w8",  icon: "", en: "Menu Website",                   ar: "منيو ويب",                    price: 20 },
+  { id: "w9",  icon: "", en: "Landing Page",                   ar: "لاندنغ بيج",                  price: 40 },
+  { id: "w10", icon: "", en: "Dashboard",                      ar: "لوحة تحكم",                   price: "30/100" },
+  { id: "w11", icon: "", en: "Design → Website Conversion",    ar: "تحويل تصميم إلى ويب",         price: 30 },
+  { id: "w12", icon: "", en: "Multi-step Flow",                ar: "خطوات متعددة",                price: "30/50" },
+  { id: "w13", icon: "", en: "Website Edit",                   ar: "تعديل على الموقع",            price: "10/50" },
+];
 
 const PACKAGES = [
   { id: "p1", en: "Quick Start",       ar: "باقة الانطلاقة السريعة", price: 60,  items: ["Landing Page", "Ads"], featured: false },
@@ -59,7 +59,7 @@ fetch("https://rana-design-api.onrender.com/api/visit", {
 
 /* ---------- cart state ---------- */
 let cart = [];
-let pendingOtherCategory = null; // "design" or "web" when Other/Plus+ is used
+let pendingOtherCategory = null;
 
 /* ---------- render cards ---------- */
 function priceBlock(item) {
@@ -91,7 +91,7 @@ function renderCards(list, containerId, category) {
 
   const otherHtml = `
     <div class="card reveal" style="border:2px dashed var(--gold); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
-      <div class="card-icon">➕</div>
+      <div class="card-icon"></div>
       <span class="card-name-en">Other / Custom Request</span>
       <span class="card-name-ar">طلب خاص</span>
       <button class="btn btn-outline btn-sm other-btn" data-category="${category}" style="margin-top:12px;">Start · ابدأ</button>
@@ -111,7 +111,7 @@ function renderPackages() {
       <span class="pkg-name-ar">${p.ar}</span>
       <div class="price">$${p.price}</div>
       <ul>${p.items.map(i => `<li>${i}</li>`).join("")}</ul>
-      <button class="btn btn-primary pkg-add" data-id="${p.id}">Choose · </button>
+      <button class="btn btn-primary pkg-add" data-id="${p.id}">Choose · اختاري</button>
     </div>
   `).join("");
   observeReveals();
@@ -154,7 +154,7 @@ function updateCartUI() {
   const countEl = document.getElementById("cartCount");
   const textEl = document.getElementById("cartBarText");
   const barEl = document.getElementById("cartBar");
-  
+
   if (countEl) countEl.textContent = count;
   if (textEl) textEl.textContent = `Services: ${count} | Total: $${total}`;
   if (barEl) barEl.classList.toggle("visible", count > 0);
@@ -172,7 +172,7 @@ document.querySelectorAll(".quicknav-card").forEach(btn => {
     if (target) {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
       target.classList.remove("section-flash");
-      void target.offsetWidth; // restart animation
+      void target.offsetWidth;
       target.classList.add("section-flash");
     }
   });
@@ -216,7 +216,6 @@ if (overlay) {
   overlay.addEventListener("click", (e) => { if (e.target === overlay) closeCheckout(); });
 }
 
-// "Other / Custom" buttons open the modal directly at step 1
 document.addEventListener("click", (e) => {
   if (e.target.matches(".other-btn")) {
     pendingOtherCategory = e.target.dataset.category;
@@ -232,12 +231,12 @@ function goToStep(n) {
     const isTarget = (p.dataset.panel === String(n)) || (p.dataset.step === String(n));
     p.classList.toggle("active", isTarget);
   });
-  
+
   document.querySelectorAll(".step-dot, .step-num").forEach(d => {
     const stepVal = Number(d.dataset.step || d.textContent);
     d.classList.toggle("active", stepVal <= n);
   });
-  
+
   const progressFill = document.getElementById("progressFill");
   if (progressFill) progressFill.style.width = (n / 4 * 100) + "%";
 }
@@ -245,8 +244,8 @@ function goToStep(n) {
 document.querySelectorAll("[data-next]").forEach(btn => btn.addEventListener("click", () => goToStep(btn.dataset.next)));
 document.querySelectorAll("[data-prev]").forEach(btn => btn.addEventListener("click", () => goToStep(btn.dataset.prev)));
 
-/* ---------- send to WhatsApp & Save to Database ---------- */
-const WHATSAPP_NUMBER = "96181412729"; // update if the number changes
+/* ---------- send to WhatsApp & save to database ---------- */
+const WHATSAPP_NUMBER = "96181412729";
 
 const sendWhatsappBtn = document.getElementById("sendWhatsapp");
 if (sendWhatsappBtn) {
@@ -283,7 +282,7 @@ if (sendWhatsappBtn) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderData)
       });
-      
+
       const result = await response.json();
       if (result.success) {
         refCode = `\nOrder ID: *${result.referenceId}*`;
@@ -293,7 +292,7 @@ if (sendWhatsappBtn) {
     }
 
     const message =
-`Hi, I'd like to confirm a new order ${refCode}
+`Hi, I'd like to confirm a new order${refCode}
 Name: ${name}
 Phone: ${phone}
 Services:
@@ -312,5 +311,4 @@ renderCards(WEB, "webGrid", "web");
 renderPackages();
 observeReveals();
 
-// remove splash from the flow after its animation finishes
-setTimeout(() => { const s = document.getElementById("splash"); if (s) s.style.display = "none"; }, 3500);s
+setTimeout(() => { const s = document.getElementById("splash"); if (s) s.style.display = "none"; }, 3500);
